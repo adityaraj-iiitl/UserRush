@@ -3,6 +3,7 @@
 Welcome to **UserRush**, a web game development event where each team builds an interactive browser-based game using the provided starter template.
 
 This template already includes authentication, backend tracking, and database integration — so your focus should be entirely on building an engaging gameplay experience.
+
 ---
 
 # 🚀 Event Overview
