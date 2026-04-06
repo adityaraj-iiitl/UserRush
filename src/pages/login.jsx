@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut } from "firebase/auth";
 import { BACKEND_URL, GAME_ID } from "../constants";
 
 // Safe read from index.html
@@ -33,7 +33,7 @@ export default function Login() {
     document.body.style.padding = "0";
     document.body.style.width = "100%";
     document.body.style.height = "100%";
-    document.body.style.background = "#0f172a";
+    document.body.style.background = "#0a0a0c";
     document.body.style.overflow = "hidden";
 
     const root = document.getElementById("root");
@@ -55,6 +55,12 @@ export default function Login() {
     try {
       const result = await signInWithPopup(auth, provider);
       const user = result.user;
+
+      if (user.email && !user.email.endsWith('@iiitl.ac.in')) {
+        await signOut(auth);
+        setStatus("Only IIIT Lucknow institutional accounts are allowed.");
+        return;
+      }
 
       const idToken = await user.getIdToken();
       setStatus("Authenticating with server...");
@@ -84,7 +90,11 @@ export default function Login() {
       }
     } catch (error) {
       console.error(error);
-      setStatus("Error logging in.");
+      if (error.code === 'auth/unauthorized-domain') {
+        setStatus("Submit your domain authorised on leaderboard website");
+      } else {
+        setStatus("Error logging in.");
+      }
     } finally {
       setLoading(false);
     }
@@ -98,7 +108,7 @@ export default function Login() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        background: "linear-gradient(135deg, #020617 0%, #0f172a 45%, #111827 100%)",
+        background: "radial-gradient(circle at top left, #1a1a2e, #0f0c29, #24243e)",
         fontFamily: "Arial, sans-serif",
         boxSizing: "border-box",
         padding: "20px"
