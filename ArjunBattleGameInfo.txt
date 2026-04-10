@@ -1,0 +1,108 @@
+# 🎮 Mahabharat Archery Game
+
+A fast-paced browser-based game inspired by the Mahabharat, where the player controls **Arjuna** and defends against waves of enemies using precise timing and strategy.
+
+---
+
+## 🚀 Live Demo
+
+👉 https://user-rusharjunbattle.vercel.app/
+
+---
+
+## 🧠 About the Project
+
+This game focuses on creating an engaging and replayable experience by combining:
+
+* Smooth gameplay mechanics
+* Increasing difficulty over time
+* Character-inspired power-ups
+
+The player must survive as long as possible while maximizing score and reacting quickly to incoming enemies.
+
+---
+
+## ✨ Features
+
+* 🏹 **Dynamic Gameplay** – Continuous enemy spawning with increasing difficulty
+* 💥 **Combat System** – Arrow shooting with collision detection
+* 📈 **Score System** – Real-time score updates
+* 🏆 **High Score Tracking** – Stored using localStorage
+* ⚡ **Power-ups** – Special support characters like Krishna and Karna
+* 🎮 **Replayability** – Designed for multiple playthroughs
+* 📱 **Responsive UI** – Works across devices
+
+---
+
+## 🛠️ Tech Stack
+
+* React (Frontend)
+* JavaScript
+* CSS / Tailwind (if used)
+* Vercel (Deployment)
+
+---
+
+## 🧩 Development Approach
+
+I had previously built a basic JavaScript game to understand core concepts like:
+
+* Game loops
+* Collision detection
+* User interaction
+
+🔗 Previous Project:
+https://github.com/adityaraj-iiitl/first-js-based-game.git
+
+For this project, I expanded on those fundamentals and focused on:
+
+* Improving gameplay experience
+* Adding structured mechanics and scaling difficulty
+* Enhancing UI and responsiveness
+
+---
+
+## 🤖 Use of AI Assistance
+
+During development, I used AI tools to assist with debugging, optimizing code, and speeding up certain implementations.
+
+However, the overall game design, logic understanding, feature decisions, and final integration were done by me, building upon my prior experience from earlier projects.
+
+---
+
+## 🎯 Objective
+
+The goal was not just to build a functional game, but to create something:
+
+* Fun to play
+* Easy to understand
+* Encouraging repeated engagement
+
+---
+
+## ⚙️ Setup Instructions
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## 📌 Important Note
+
+* Authentication and backend tracking are handled by the provided event template
+* This project focuses only on frontend game development and gameplay experience
+
+---
+
+## 👤 Author
+
+Aditya Raj
+BTech Student | Aspiring Software Engineer
+
+---
+
+## ⭐ Feedback
+
+If you enjoyed playing the game, feel free to share and provide feedback!
